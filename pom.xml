@@ -107,7 +107,7 @@
 	</distributionManagement>
 	
 	<build>
-		<finalName>blackberry</finalName>
+		<finalName>paypal</finalName>
 		
 		<plugins>
 			<plugin>
