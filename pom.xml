@@ -95,7 +95,7 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://3.80.37.1:8081/repository/paypal-release/</url>
+	      <url>http://54.196.145.156:8081/repository/paypal-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
@@ -107,7 +107,7 @@
 	</distributionManagement>
 	
 	<build>
-		<finalName>visa dev webapp</finalName>
+		<finalName>TD dev webapp</finalName>
 		
 		<plugins>
 			<plugin>
