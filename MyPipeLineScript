@@ -17,7 +17,7 @@ stage('3.CodeQualityAnalysis'){
       sh "${mavenhome}/bin/mvn deploy"
   }
   stage('5.Deploy2UAT'){
-     deploy adapters: [tomcat9(credentialsId: 'tomcat9', path: '', url: 'http://52.91.159.40:8080/')], contextPath: null, war: 'target/*.war'
+    deploy adapters: [tomcat9(credentialsId: 'tomcat9', path: '', url: 'http://52.91.159.40:8080/')], contextPath: null, war: 'target/*war'
       // Make sure Tomcat is started on your server & Generate a 'Pipeline Syntax' for a deploy adapter
   }
   stage('6.ManualApproval'){
@@ -28,7 +28,7 @@ stage('3.CodeQualityAnalysis'){
       }
   }
   stage('7.Deploy2Prod'){
-      deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://3.86.203.143:8177/')], contextPath: null, war: 'target/*war'
+      deploy adapters: [tomcat9(credentialsId: 'tomcat9', path: '', url: 'http://52.91.159.40:8080/')], contextPath: null, war: 'target/*war'
       // I used the same pipeline syntax for my deployment to production 
   }
   stage('8.Notification'){
